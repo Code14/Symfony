@@ -11,5 +11,5 @@ class DefaultController extends Controller
         return $this->render('ProyectosDepartamentoBundle:Default:index.html.twig', array('name' => $name));
     }
 
-    public function pruebaAction(){}
+    public function pruebaAction(asdsa){}
 }
