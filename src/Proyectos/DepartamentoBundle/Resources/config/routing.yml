@@ -1,0 +1,3 @@
+proyectos_departamento_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ProyectosDepartamentoBundle:Default:index }
