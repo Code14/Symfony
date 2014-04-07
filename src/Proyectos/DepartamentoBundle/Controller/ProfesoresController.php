@@ -12,6 +12,7 @@ class ProfesoresController extends Controller
         $profesores = $this->getDoctrine()->getRepository('ProyectosDepartamentoBundle:Profesor')->findAll();
 
         return $this->render('ProyectosDepartamentoBundle:Profesores:index.html.twig', array('datos' => $profesores));
+
     }
 
 }
