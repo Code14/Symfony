@@ -1,3 +1,7 @@
+proyectos_prueba:
+    resource: "@ProyectosPruebaBundle/Resources/config/routing.yml"
+    prefix:   /
+
 proyectos_departamento:
     resource: "@ProyectosDepartamentoBundle/Resources/config/routing.yml"
     prefix:   /
