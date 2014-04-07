@@ -1,1 +1,9 @@
-Hello !
+{% for alumno in data %}
+    <tr>
+            <td>{{ alumno.visualiza(2) }} - {{ alumno.nombre }} </td>
+    </tr>
+{% endfor %}
+
+
+
+{#{{ alumno.nombre }}#}

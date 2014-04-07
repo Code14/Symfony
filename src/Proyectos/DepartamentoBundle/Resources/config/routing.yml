@@ -1,3 +1,8 @@
 proyectos_departamento_homepage:
     pattern:  /hello/
     defaults: { _controller: ProyectosDepartamentoBundle:Default:index }
+
+
+proyectos_departamento_visualizaAlumnos:
+    pattern:  /visualiza/
+    defaults: { _controller: ProyectosDepartamentoBundle:Default:mostrarTodos }
