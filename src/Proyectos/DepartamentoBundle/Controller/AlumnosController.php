@@ -14,4 +14,22 @@ class AlumnosController extends Controller
         // Nombre del array con el que pasamos los datos a la plantilla twig
         return $this->render('ProyectosDepartamentoBundle:Alumnos:index.html.twig', array('data' => $alumnos));
     }
+
+    public function detalleAlumno(){
+
+    }
+
+    public function añadirAlumno(){
+
+    }
+
+    public function eliminarAlumno(){
+
+    }
+
+    public function modificarAlumno(){
+
+    }
+
+
 }
