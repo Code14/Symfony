@@ -6,6 +6,30 @@ proyectos_departamento_alumnos:
     pattern:  /alumnos/
     defaults: { _controller: ProyectosDepartamentoBundle:Alumnos:index }
 
+proyectos_departamento_alumnos_detalle:
+    pattern:  /alumnos/detalle/{id}
+    defaults: { _controller: ProyectosDepartamentoBundle:Alumnos:detalleAlumno }
+
+proyectos_departamento_alumnos_modificar:
+    pattern:  /alumnos/modificar/{id}
+    defaults: { _controller: ProyectosDepartamentoBundle:Alumnos:modificarAlumno }
+
+proyectos_departamento_alumnos_eliminar:
+    pattern:  /alumnos/eliminar/{id}
+    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:eliminarAlumno }
+
 proyectos_departamento_profesores:
     pattern:  /profesores/
     defaults: { _controller: ProyectosDepartamentoBundle:Profesores:index }
+
+proyectos_departamento_profesores_detalle:
+    pattern:  /profesores/detalle/{id}
+    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:detalleProfesor }
+
+proyectos_departamento_profesores_modificar:
+    pattern:  /profesores/modificar/{id}
+    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:modificarProfesor }
+
+proyectos_departamento_profesores_eliminar:
+    pattern:  /profesores/eliminar/{id}
+    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:eliminarProfesor }

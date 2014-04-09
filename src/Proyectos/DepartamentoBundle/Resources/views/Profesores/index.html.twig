@@ -1,5 +1,8 @@
 {% for profesor in datos  %}
     <tr>
         <td>({ profesor.nombre }}</td>
+        <a href="{{ url('proyectos_departamento_profesores') }}">Detalle</a>
+        <td><a href="{{ url('proyectos_departamento_profesores') }}">Modificar</a></td>
+        <a href="{{ url('proyectos_departamento_profesores') }}">Eliminar</a>
     </tr>
 {% endfor %}
