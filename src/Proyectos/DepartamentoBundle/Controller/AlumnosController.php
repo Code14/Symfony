@@ -37,8 +37,9 @@ class AlumnosController extends Controller
         return $this->redirect("/alumnos/");
     }
 
-    public function añadirAlumnoAction(){
+    public function anadirAlumnoGetAction(){
 
+            return $this->render('ProyectosDepartamentoBundle:Profesores:anadir.html.twig');
     }
 
 

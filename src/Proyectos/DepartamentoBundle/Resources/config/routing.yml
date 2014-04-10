@@ -24,13 +24,17 @@ proyectos_departamento_alumnos_eliminar_confirm:
     defaults: { _controller: ProyectosDepartamentoBundle:Alumnos:eliminarAlumnoPost }
     methods:   [POST]
 
+proyectos_departamento_alumnos_anadirGet:
+    pattern:  /alumnos/anadir/
+    defaults: {  _controller: ProyectosDepartamentoBundle:Alumnos:anadirAlumnoGet }
+    methods:  [GET]
 proyectos_departamento_profesores:
     pattern:  /profesores/
     defaults: { _controller: ProyectosDepartamentoBundle:Profesores:index }
 
-proyectos_departamento_profesores_anadir:
+proyectos_departamento_profesores_anadirGet:
     pattern:  /profesores/anadir/
-    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:anadirProfesor }
+    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:anadirProfesorGet }
     methods:  [GET]
 
 proyectos_departamento_profesores_detalle:
