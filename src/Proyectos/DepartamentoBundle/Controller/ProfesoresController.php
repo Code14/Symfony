@@ -11,8 +11,33 @@ class ProfesoresController extends Controller
     {
         $profesores = $this->getDoctrine()->getRepository('ProyectosDepartamentoBundle:Profesor')->findAll();
 
-        return $this->render('ProyectosDepartamentoBundle:Profesores:index.html.twig', array('datos' => $profesores));
+        return $this->render('ProyectosDepartamentoBundle:Profesores:index.html.twig', array('profesores' => $profesores));
 
     }
 
+    public function detalleProfesorAction($id)
+    {
+        $profesor = $this->getDoctrine()->getRepository('ProyectosDepartamentoBundle:Profesor')->find($id);
+
+        return $this->render('ProyectosDepartamentoBundle:Profesores:detalle.html.twig', array('profesor' => $profesor));
+    }
+
+    public function eliminarProfesorGetAction($id){
+
+        $profesor = $this->getDoctrine()->getRepository('ProyectosDepartamentoBundle:Profesor')->find($id);
+
+        return $this->render('ProyectosDepartamentoBundle:Profesores:eliminar.html.twig', array('profesor' => $profesor));
+    }
+
+    public function eliminarProfesorPostAction($id){
+        $profesor = $this->getDoctrine()->getRepository('ProyectosDepartamentoBundle:Profesor')->find($id);
+        $el = $this->getDoctrine()->getManager();
+        $el->remove($profesor);
+        $el->flush();
+        return $this->redirect("/profesores/");
+    }
+
+    public function anadirProfesorAction(){
+        return $this->render('ProyectosDepartamentoBundle:Profesores:anadir.html.twig');
+    }
 }
