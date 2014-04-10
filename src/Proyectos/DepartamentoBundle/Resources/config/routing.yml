@@ -16,7 +16,13 @@ proyectos_departamento_alumnos_modificar:
 
 proyectos_departamento_alumnos_eliminar:
     pattern:  /alumnos/eliminar/{id}
-    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:eliminarAlumno }
+    defaults: { _controller: ProyectosDepartamentoBundle:Alumnos:eliminarAlumnoGet }
+    methods:  [GET]
+
+proyectos_departamento_alumnos_eliminar_confirm:
+    pattern:   /alumnos/eliminar/{id}
+    defaults: { _controller: ProyectosDepartamentoBundle:Alumnos:eliminarAlumnoPost }
+    methods:   [POST]
 
 proyectos_departamento_profesores:
     pattern:  /profesores/

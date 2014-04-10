@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <td>Nombre: {{ alumno.nombre }}</td>
+    </tr>
+    <tr>
+        <td>Apellido: {{ alumno.apellido }}</td>
+    </tr>
+</table>
+<form type="submit">
+    <button formaction="{{ url('proyectos_departamento_homepage') }}">Inicio</button>
+    <button formaction="{{ url('proyectos_departamento_alumnos') }}">Atrás</button>
+</form>

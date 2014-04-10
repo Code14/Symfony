@@ -1,5 +1,10 @@
+<table>
 {% for alumno in data %}
     <tr>
         <td> {{ alumno.nombre }} </td>
+        <td><a href="{{ path('proyectos_departamento_alumnos_detalle',{ 'id': alumno.idalumno }) }}">Detalle</a></td>
+        <td><a href="{{ path('proyectos_departamento_alumnos_modificar',{'id': alumno.idalumno }) }}">Modificar</a></td>
+        <td><a href="{{ path('proyectos_departamento_alumnos_eliminar',{'id': alumno.idalumno }) }}">Eliminar</a></td>
     </tr>
 {% endfor %}
+</table>
