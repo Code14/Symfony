@@ -1,18 +1,22 @@
+<h1>¿Desea eliminar el siguiente profesor?</h1>
 <table>
     <tr>
         <td>Nombre: {{ profesor.nombre }}</td>
     </tr>
     <tr>
-        <td>Apellidos: {{ profesor.apellidos }}</td>
+        <td>Apellido: {{ profesor.apellidos }}</td>
     </tr>
     <tr>
+        <td>
+            <form method="post">
+                <input type="submit" value="Borrar"/>
+            </form>
+        </td>
         <td>
             <form method="post" action="/profesores/">
                 <input type="submit" value="<< Atrás"/>
             </form>
-            <form method="post" action="/">
-                <input type="submit" value="Inicio"/>
-            </form>
         </td>
     </tr>
 </table>
+

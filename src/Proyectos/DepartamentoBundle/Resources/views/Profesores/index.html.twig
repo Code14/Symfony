@@ -1,8 +1,22 @@
-{% for profesor in datos  %}
-    <tr>
-        <td>({ profesor.nombre }}</td>
-        <a href="{{ url('proyectos_departamento_profesores') }}">Detalle</a>
-        <td><a href="{{ url('proyectos_departamento_profesores') }}">Modificar</a></td>
-        <a href="{{ url('proyectos_departamento_profesores') }}">Eliminar</a>
-    </tr>
-{% endfor %}
+<table>
+    {% for profesor in profesores  %}
+        <tr>
+            <td>{{ profesor.nombre }}</td>
+            <td><a href="{{ path('proyectos_departamento_profesores_detalle',{'id': profesor.idprofesor}) }}">Detalle</a></td>
+            <td><a href="{{ path('proyectos_departamento_profesores_modificar',{'id': profesor.idprofesor}) }}">Modificar</a></td>
+            <td><a href="{{ path('proyectos_departamento_profesores_eliminar',{'id': profesor.idprofesor}) }}">Eliminar</a></td>
+        </tr>
+        <tr>
+            <td>
+                <form method="post" action="/">
+                    <input type="submit" value="Inicio"/>
+                </form>
+            </td>
+            <td>
+                <form action="/profesores/anadir/">
+                    <input type="submit" value="Añadir Nuevo Profesor"/>
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+</table>

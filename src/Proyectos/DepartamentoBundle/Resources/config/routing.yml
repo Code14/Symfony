@@ -28,6 +28,11 @@ proyectos_departamento_profesores:
     pattern:  /profesores/
     defaults: { _controller: ProyectosDepartamentoBundle:Profesores:index }
 
+proyectos_departamento_profesores_anadir:
+    pattern:  /profesores/anadir/
+    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:anadirProfesor }
+    methods:  [GET]
+
 proyectos_departamento_profesores_detalle:
     pattern:  /profesores/detalle/{id}
     defaults: { _controller: ProyectosDepartamentoBundle:Profesores:detalleProfesor }
@@ -38,4 +43,10 @@ proyectos_departamento_profesores_modificar:
 
 proyectos_departamento_profesores_eliminar:
     pattern:  /profesores/eliminar/{id}
-    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:eliminarProfesor }
+    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:eliminarProfesorGet }
+    methods:  [GET]
+
+proyectos_departamento_profesores_eliminar_confirm:
+    pattern:   /profesores/eliminar/{id}
+    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:eliminarProfesorPost }
+    methods:   [POST]
