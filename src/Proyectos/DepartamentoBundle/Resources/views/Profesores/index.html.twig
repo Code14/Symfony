@@ -6,17 +6,11 @@
             <td><a href="{{ path('proyectos_departamento_profesores_modificar',{'id': profesor.idprofesor}) }}">Modificar</a></td>
             <td><a href="{{ path('proyectos_departamento_profesores_eliminar',{'id': profesor.idprofesor}) }}">Eliminar</a></td>
         </tr>
-        <tr>
-            <td>
-                <form method="post" action="/">
-                    <input type="submit" value="Inicio"/>
-                </form>
-            </td>
-            <td>
-                <form action="/profesores/anadir/">
-                    <input type="submit" value="Añadir Nuevo Profesor"/>
-                </form>
-            </td>
-        </tr>
     {% endfor %}
 </table>
+<form method="post" action="/">
+    <input type="submit" value="Inicio"/>
+</form>
+<form action="/profesores/anadir/">
+    <input type="submit" value="Añadir Nuevo Profesor"/>
+</form>

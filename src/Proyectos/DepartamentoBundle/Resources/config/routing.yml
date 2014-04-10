@@ -28,6 +28,12 @@ proyectos_departamento_alumnos_anadirGet:
     pattern:  /alumnos/anadir/
     defaults: {  _controller: ProyectosDepartamentoBundle:Alumnos:anadirAlumnoGet }
     methods:  [GET]
+
+proyectos_departamento_alumnos_anadirPost:
+    pattern:  /alumnos/anadir/
+    defaults: {  _controller: ProyectosDepartamentoBundle:Alumnos:anadirAlumnoPost }
+    methods:  [POST]
+
 proyectos_departamento_profesores:
     pattern:  /profesores/
     defaults: { _controller: ProyectosDepartamentoBundle:Profesores:index }
@@ -36,6 +42,11 @@ proyectos_departamento_profesores_anadirGet:
     pattern:  /profesores/anadir/
     defaults: { _controller: ProyectosDepartamentoBundle:Profesores:anadirProfesorGet }
     methods:  [GET]
+
+proyectos_departamento_profesores_anadirPost:
+    pattern:  /profesores/anadir/
+    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:anadirProfesorPost }
+    methods:  [POST]
 
 proyectos_departamento_profesores_detalle:
     pattern:  /profesores/detalle/{id}
