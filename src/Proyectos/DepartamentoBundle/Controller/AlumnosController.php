@@ -24,13 +24,17 @@ class AlumnosController extends Controller
 
     public function eliminarAlumnoGetAction($id){
 
-        return $this->render('ProyectosDepartamentoBundle:Alumnos:eliminar.html.twig');
+        $alumno = $this->getDoctrine()->getRepository('ProyectosDepartamentoBundle:Alumno')->find($id);
+        return $this->render('ProyectosDepartamentoBundle:Alumnos:eliminar.html.twig', array('alumno' => $alumno));
     }
 
 
     public function eliminarAlumnoPostAction($id){
-        $alumnos = $this->getDoctrine()->getRepository('ProyectosDepartamentoBundle:Alumno')->findAll();
-        return $this->render('ProyectosDepartamentoBundle:Alumnos:index.html.twig', array('data' => $alumnos));
+        $alumno = $this->getDoctrine()->getRepository('ProyectosDepartamentoBundle:Alumno')->find($id);
+        $el = $this->getDoctrine()->getManager();
+        $el->remove($alumno);
+        $el->flush();
+        return $this->redirect("/alumnos/");
     }
 
     public function añadirAlumnoAction(){
