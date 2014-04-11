@@ -55,4 +55,8 @@ class ProfesoresController extends Controller
         $profesor = $this->getDoctrine()->getRepository('ProyectosDepartamentoBundle:Profesor')->find($id);
         return $this->render('ProyectosDepartamentoBundle:Profesores:modificar.html.twig', array('profesor' => $profesor));
     }
+
+    public function modificarProfesorPostAction($id){
+        return $this->redirect("/profesores/");
+    }
 }

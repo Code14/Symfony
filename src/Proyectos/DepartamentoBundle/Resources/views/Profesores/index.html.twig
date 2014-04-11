@@ -3,7 +3,7 @@
         <tr>
             <td>{{ profesor.nombre }}</td>
             <td><a href="{{ path('proyectos_departamento_profesores_detalle',{'id': profesor.idprofesor}) }}">Detalle</a></td>
-            <td><a href="{{ path('proyectos_departamento_profesores_modificar',{'id': profesor.idprofesor}) }}">Modificar</a></td>
+            <td><a href="{{ path('proyectos_departamento_profesores_modificarGet',{'id': profesor.idprofesor}) }}">Modificar</a></td>
             <td><a href="{{ path('proyectos_departamento_profesores_eliminar',{'id': profesor.idprofesor}) }}">Eliminar</a></td>
         </tr>
     {% endfor %}
