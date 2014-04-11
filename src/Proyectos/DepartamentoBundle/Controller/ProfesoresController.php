@@ -40,4 +40,8 @@ class ProfesoresController extends Controller
     public function anadirProfesorGetAction(){
         return $this->render('ProyectosDepartamentoBundle:Profesores:anadir.html.twig');
     }
+
+    public function anadirProfesorPostAction(){
+        return $this->redirect("/profesores/");
+    }
 }
