@@ -10,9 +10,15 @@ proyectos_departamento_alumnos_detalle:
     pattern:  /alumnos/detalle/{id}
     defaults: { _controller: ProyectosDepartamentoBundle:Alumnos:detalleAlumno }
 
-proyectos_departamento_alumnos_modificar:
+proyectos_departamento_alumnos_modificarGet:
     pattern:  /alumnos/modificar/{id}
-    defaults: { _controller: ProyectosDepartamentoBundle:Alumnos:modificarAlumno }
+    defaults: { _controller: ProyectosDepartamentoBundle:Alumnos:modificarAlumnoGet }
+    methods: [GET]
+
+proyectos_departamento_alumnos_modificarPost:
+    pattern:  /alumnos/modificar/{id}
+    defaults: { _controller: ProyectosDepartamentoBundle:Alumnos:modificarAlumnoPost }
+    methods: [POST]
 
 proyectos_departamento_alumnos_eliminar:
     pattern:  /alumnos/eliminar/{id}
@@ -52,9 +58,15 @@ proyectos_departamento_profesores_detalle:
     pattern:  /profesores/detalle/{id}
     defaults: { _controller: ProyectosDepartamentoBundle:Profesores:detalleProfesor }
 
-proyectos_departamento_profesores_modificar:
+proyectos_departamento_profesores_modificarGet:
     pattern:  /profesores/modificar/{id}
-    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:modificarProfesor }
+    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:modificarProfesorGet }
+    methods: [GET]
+
+proyectos_departamento_profesores_modificarPost:
+    pattern:  /profesores/modificar/{id}
+    defaults: { _controller: ProyectosDepartamentoBundle:Profesores:modificarProfesorPost }
+    methods: [POST]
 
 proyectos_departamento_profesores_eliminar:
     pattern:  /profesores/eliminar/{id}
