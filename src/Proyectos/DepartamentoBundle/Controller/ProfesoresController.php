@@ -42,6 +42,12 @@ class ProfesoresController extends Controller
     }
 
     public function anadirProfesorPostAction(){
+        $profesor = new Profesor();
+        $profesor->setNombre($_POST["nombre"]);
+        $profesor->setApellidos($_POST["apellidos"]);
+        $el = $this->getDoctrine()->getManager();
+        $el->persist($profesor);
+        $el->flush();
         return $this->redirect("/profesores/");
     }
 }
